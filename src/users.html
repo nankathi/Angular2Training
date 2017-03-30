@@ -1,0 +1,82 @@
+<page>
+    <page-header>Users</page-header>
+    <page-content>
+         <table class="table">
+            <thead>
+                <tr>
+                    <th>First Name<span><i class="fa  fa-sort-amount-asc"></i></span></th>
+                    <th>Last Name<span><i class="fa  fa-sort-amount-desc"></i></span></th>
+                    <th>Username</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--<tr *ngFor="let dummy of empty">-->
+                <!--<tr>
+                    <td><input type="text" id="first-name" name="firt-name" placeholder="Search by Firstname..." required="required"
+                            class="form-control col-md-7 col-xs-12"></td>
+                    <td><input type="text" id="first-name" name="firt-name" placeholder="Search by Lastname..." required="required"
+                            class="form-control col-md-7 col-xs-12"></td>
+                    <td><input type="text" id="first-name" name="firt-name" placeholder="Search by Username..." required="required"
+                            class="form-control col-md-7 col-xs-12"></td>
+                    <td><a style="cursor: pointer" (click)="addNewUser($event)" title="Add New">Add New</a></td>
+                </tr>-->
+                <!--<tr>
+                    <td *ngFor="let dummy of empty">
+                        <input type="text" id="first-name" name="firt-name" placeholder="Search..." class="form-control col-md-7 col-xs-12">
+                    </td>
+                </tr>-->
+
+                <!--<tr *ngIf="newItem">
+                    <td>
+                        <input type="text" id="first-name" name="first-name" [(ngModel)]="fName"  placeholder="Firstname" required="required"
+                            class="form-control col-md-7 col-xs-12">
+                    </td>
+                    <td>
+                        <input type="text" id="last-name" name="last-name" [(ngModel)]="lName" placeholder="Lastname" required="required"
+                            class="form-control col-md-7 col-xs-12">
+                    </td>
+                    <td>
+                        <input id="user-name"  class="form-control col-md-7 col-xs-12" [(ngModel)]="fullName" placeholder="Username"
+                            type="text" name="user-name">
+                    </td>
+                    <td>
+                        <a (click)="onQuickEditClicked(user)" title="Quick Edit"><i class="fa fa-pencil fa-lg"></i></a>
+                        <a (click)="onSaveClicked(user)" title="Save"><i class="fa  fa-save fa-lg"></i></a>
+                        <a (click)="cancelClicked(user)" title="Save"><i class="fa fa-close fa-lg"></i></a>
+                    </td>
+                </tr>-->
+
+                <tr *ngFor="let user of users">
+                    <td>
+                        {{user.firstName}}
+                        <!--<span *ngIf="user.mode==ViewMode.View">{{user.firstName}}</span>-->
+                        <!--<input *ngIf="user.mode==ViewMode.Edit" type="text" id="first-name" name="firt-name" [(ngModel)]="user.currentVersion.firstName"
+                            required="required" class="form-control col-md-7 col-xs-12">-->
+                    </td>
+                    <td>
+                        {{user.lastName}}
+                        <!--<span *ngIf="user.mode==ViewMode.View">{{user.lastName}}</span>
+                        <input *ngIf="user.mode==ViewMode.Edit" type="text" id="last-name" name="last-name" [(ngModel)]="user.currentVersion.lastName" required="required"
+                            class="form-control col-md-7 col-xs-12">-->
+                        <!--<span *ngIf="user.mode==ViewMode.View">{{user.lastName}}</span>-->
+                        <!--<input *ngIf="user.mode==ViewMode.Edit" type="text" id="last-name" name="last-name" [(ngModel)]="user.currentVersion.lastName"
+                            required="required" class="form-control col-md-7 col-xs-12">-->
+                    </td>
+                    <td>
+                        {{user.userName}}
+                        <!--<span *ngIf="user.mode==ViewMode.View">{{user.userName}}</span>-->
+                        <!--<input *ngIf="user.mode==ViewMode.Edit" id="middle-name" [(ngModel)]="user.currentVersion.userName" class="form-control col-md-7 col-xs-12"
+                            type="text" name="middle-name">-->
+                    </td>
+                    <td>
+                        <a (click)="onQuickEditClicked(user)" title="Quick Edit"><i class="fa fa-pencil fa-lg"></i></a>
+                        <!--<a (click)="onSaveClicked(user)" *ngIf="user.mode==ViewMode.Edit" title="Save"><i class="fa  fa-save fa-lg"></i></a>
+                        <a (click)="cancelClicked(user)" *ngIf="user.mode==ViewMode.Edit" title="Close"><i class="fa fa-close fa-lg"></i></a>-->
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+          <user-quick-edit [(firstName)]="selectedUser.firstName" *ngIf="selectedUser"></user-quick-edit>
+    </page-content>
+</page>

@@ -1,0 +1,16 @@
+[
+        {
+            "firstName":"Raj",
+            "lastName":"Ankathi",
+            "userName":"Raj Anakthi",
+            "avatar":"doraemon.jpg",
+            "mode":1
+        },
+        {
+            "firstName":"Nag",
+            "lastName":"Ankathi",
+            "userName":"Raj Anakthi",
+            "avatar":"doraemon.jpg",
+            "mode":2
+        }
+ ]

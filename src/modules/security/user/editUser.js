@@ -9,14 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
-let Page = class Page {
+const router_1 = require('@angular/router');
+const userService_1 = require('./../_share/services/userService');
+let EditUser = class EditUser {
+    constructor(userService, activatedRoute) {
+        this.user = {};
+        let userId = activatedRoute.params["value"].userId;
+        let self = this;
+        userService.getUser(userId).subscribe((user) => {
+            self.user = user;
+        });
+    }
 };
-Page = __decorate([
+EditUser = __decorate([
     core_1.Component({
-        selector: "page",
-        templateUrl: "src/page.html"
+        templateUrl: 'src/modules/security/user/editUser.html',
     }), 
-    __metadata('design:paramtypes', [])
-], Page);
-exports.Page = Page;
-//# sourceMappingURL=page.js.map
+    __metadata('design:paramtypes', [userService_1.UserService, router_1.ActivatedRoute])
+], EditUser);
+exports.EditUser = EditUser;
+//# sourceMappingURL=editUser.js.map

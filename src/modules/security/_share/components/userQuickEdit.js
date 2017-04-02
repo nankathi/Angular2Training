@@ -32,7 +32,7 @@ __decorate([
 UserQuickEdit = __decorate([
     core_1.Component({
         selector: 'user-quick-edit',
-        templateUrl: 'src/UserQuickEdit.html'
+        templateUrl: 'src/modules/security/_share/components/UserQuickEdit.html'
     }), 
     __metadata('design:paramtypes', [])
 ], UserQuickEdit);

@@ -70,7 +70,8 @@
                             type="text" name="middle-name">-->
                     </td>
                     <td>
-                        <a (click)="onQuickEditClicked(user)" title="Quick Edit"><i class="fa fa-pencil fa-lg"></i></a>
+                        <!--<a (click)="onQuickEditClicked(user)" title="Quick Edit"><i class="fa fa-pencil fa-lg"></i></a>-->
+                         <a (click)="onEditClicked(user)" title="Edit"><i class="fa fa-pencil fa-lg"></i></a>
                         <!--<a (click)="onSaveClicked(user)" *ngIf="user.mode==ViewMode.Edit" title="Save"><i class="fa  fa-save fa-lg"></i></a>
                         <a (click)="cancelClicked(user)" *ngIf="user.mode==ViewMode.Edit" title="Close"><i class="fa fa-close fa-lg"></i></a>-->
                     </td>

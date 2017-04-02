@@ -8,27 +8,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const http_1 = require('@angular/http');
 const core_1 = require('@angular/core');
-require('rxjs/add/operator/map');
-let UserService = class UserService {
-    constructor(http) {
-        this.http = http;
-    }
-    getUsers() {
-        let url = 'api/users.json';
-        return this.http.get(url).map((response) => {
-            return response.json();
-        });
-        // return  [
-        // {firstName:"Raj",lastName:"Ankathi",userName:"Raj Anakthi",avatar:"doraemon.jpg",mode:1},
-        // {firstName:"Raj",lastName:"Ankathi",userName:"Raj Anakthi2",avatar:"doraemon.jpg",mode:2},
-        // ];
-    }
+const page_1 = require('./components/page');
+let CommonModule = class CommonModule {
 };
-UserService = __decorate([
-    core_1.Injectable(), 
-    __metadata('design:paramtypes', [http_1.Http])
-], UserService);
-exports.UserService = UserService;
-//# sourceMappingURL=userService.js.map
+CommonModule = __decorate([
+    core_1.NgModule({
+        declarations: [page_1.Page],
+        exports: [page_1.Page]
+    }), 
+    __metadata('design:paramtypes', [])
+], CommonModule);
+exports.CommonModule = CommonModule;
+//# sourceMappingURL=commonModule.js.map

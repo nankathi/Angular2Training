@@ -8,6 +8,14 @@ export class UserService {
     constructor(http:Http){
         this.http = http;
     }
+    public getUser(userId:any){
+        let url = 'api/user_1.json';
+        return this.http.get(url).map(
+            (response:Response) =>{
+                return response.json();
+            }
+        );
+    }
     public getUsers(){
         let url = 'api/users.json';
         return this.http.get(url).map(
@@ -15,9 +23,5 @@ export class UserService {
                 return response.json();
             }
         )
-        // return  [
-        // {firstName:"Raj",lastName:"Ankathi",userName:"Raj Anakthi",avatar:"doraemon.jpg",mode:1},
-        // {firstName:"Raj",lastName:"Ankathi",userName:"Raj Anakthi2",avatar:"doraemon.jpg",mode:2},
-        // ];
     }
 }

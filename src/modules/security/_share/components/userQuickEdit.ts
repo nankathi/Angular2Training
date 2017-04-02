@@ -1,7 +1,7 @@
 import { Component,Input,Output,EventEmitter } from '@angular/core';
 @Component({
     selector:'user-quick-edit',
-    templateUrl:'src/UserQuickEdit.html'
+    templateUrl:'src/modules/security/_share/components/UserQuickEdit.html'
 })
 export class UserQuickEdit {
    //@Input + Change = Output

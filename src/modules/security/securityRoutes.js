@@ -10,14 +10,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 const router_1 = require("@angular/router");
 const core_1 = require("@angular/core");
-const users_1 = require("./users");
+const users_1 = require("./user/users");
+const editUser_1 = require("./user/editUser");
 let routes = [
-    {
-        path: "users", component: users_1.Users
-    },
-    {
-        path: "", redirectTo: "users", pathMatch: "full"
-    }
+    { path: "", redirectTo: "users", pathMatch: "full" },
+    { path: "users", component: users_1.Users },
+    { path: 'users/:userId', component: editUser_1.EditUser },
 ];
 let SecurityRoutes = class SecurityRoutes {
 };

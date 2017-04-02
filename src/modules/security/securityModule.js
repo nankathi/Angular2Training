@@ -12,18 +12,20 @@ const core_1 = require("@angular/core");
 const platform_browser_1 = require("@angular/platform-browser");
 const forms_1 = require("@angular/forms");
 const http_1 = require('@angular/http');
-const defaultPage_1 = require("./defaultPage");
+const commonModule_1 = require('./../../modules/common/commonModule');
+const defaultPage_1 = require("./../../defaultPage");
 const securityRoutes_1 = require("./securityRoutes");
-const users_1 = require("./users");
-const userQuickEdit_1 = require("./userQuickEdit");
-const page_1 = require('./page');
-const userService_1 = require('./userService');
+const users_1 = require("./user/users");
+const editUser_1 = require("./user/editUser");
+const userQuickEdit_1 = require("./_share/components/userQuickEdit");
+// import {Page} from './../../page';
+const userService_1 = require('./_share/services/userService');
 let SecurityModule = class SecurityModule {
 };
 SecurityModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule, securityRoutes_1.SecurityRoutes],
-        declarations: [defaultPage_1.DefaultPage, users_1.Users, userQuickEdit_1.UserQuickEdit, page_1.Page],
+        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule, securityRoutes_1.SecurityRoutes, commonModule_1.CommonModule],
+        declarations: [defaultPage_1.DefaultPage, users_1.Users, userQuickEdit_1.UserQuickEdit, editUser_1.EditUser],
         bootstrap: [defaultPage_1.DefaultPage],
         schemas: [core_1.CUSTOM_ELEMENTS_SCHEMA],
         providers: [userService_1.UserService]

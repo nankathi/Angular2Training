@@ -9,15 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
+const common_1 = require('@angular/common');
+const forms_1 = require('@angular/forms');
 const page_1 = require('./components/page');
-let CommonModule = class CommonModule {
+const formInput_1 = require('./components/form/formInput');
+const horizontalForm_1 = require('./components/form/horizontalForm');
+const formButtonPrimary_1 = require('./components/form/formButtonPrimary');
+let AppCommonModule = class AppCommonModule {
 };
-CommonModule = __decorate([
+AppCommonModule = __decorate([
     core_1.NgModule({
-        declarations: [page_1.Page],
-        exports: [page_1.Page]
+        imports: [common_1.CommonModule, forms_1.FormsModule],
+        declarations: [page_1.Page, formInput_1.FormInput, horizontalForm_1.HorizontalForm, formButtonPrimary_1.FormButtonPrimary],
+        exports: [page_1.Page, formInput_1.FormInput, horizontalForm_1.HorizontalForm, formButtonPrimary_1.FormButtonPrimary]
     }), 
     __metadata('design:paramtypes', [])
-], CommonModule);
-exports.CommonModule = CommonModule;
+], AppCommonModule);
+exports.AppCommonModule = AppCommonModule;
 //# sourceMappingURL=commonModule.js.map

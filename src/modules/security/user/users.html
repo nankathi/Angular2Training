@@ -78,6 +78,7 @@
                 </tr>
             </tbody>
         </table>
+          <!--<user-quick-edit [firstName]="selectedUser.firstName" (onChanged)="OnFirstNamechanged()" *ngIf="selectedUser"></user-quick-edit>        -->
           <user-quick-edit [(firstName)]="selectedUser.firstName" *ngIf="selectedUser"></user-quick-edit>
     </page-content>
 </page>

@@ -24,7 +24,7 @@ let SecurityModule = class SecurityModule {
 };
 SecurityModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule, securityRoutes_1.SecurityRoutes, commonModule_1.CommonModule],
+        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule, securityRoutes_1.SecurityRoutes, commonModule_1.AppCommonModule],
         declarations: [defaultPage_1.DefaultPage, users_1.Users, userQuickEdit_1.UserQuickEdit, editUser_1.EditUser],
         bootstrap: [defaultPage_1.DefaultPage],
         schemas: [core_1.CUSTOM_ELEMENTS_SCHEMA],

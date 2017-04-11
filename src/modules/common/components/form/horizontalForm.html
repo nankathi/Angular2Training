@@ -1,0 +1,36 @@
+<form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
+    <ng-content select="form-input"></ng-content>
+    <!--<form-input [label]="'First Name'" [value]="user.firstName"></form-input>
+    <form-input [label]="'Last Name'" [value]="user.lastName"></form-input>
+    <form-input [label]="'Full Name'" [value]="user.userName"></form-input>-->
+    <!--<div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">First Name <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" name="first-name" [(ngModel)]="user.firstName" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Last Name <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="last-name" name="last-name" [(ngModel)]="user.lastName" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Middle Name / Initial</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="middle-name" class="form-control col-md-7 col-xs-12" [(ngModel)]=user.userName type="text" name="middle-name">
+                        </div>
+                      </div>-->
+    <div class="ln_solid"></div>
+    <div class="form-group">
+        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+            <ng-content select="form-button-primary"></ng-content>
+            <!--<button class="btn btn-primary" type="button">Cancel</button>-->
+            <!--<button class="btn btn-primary" type="reset">Reset</button>
+            <button type="submit" class="btn btn-success">Submit</button>-->
+        </div>
+    </div>
+
+</form>

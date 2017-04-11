@@ -41,6 +41,9 @@ let Users = class Users {
         user.mode = ItemViewMode.View;
         user.firstName = user.currentVersion.firstName;
     }
+    OnFirstNamechanged() {
+        console.log("OnFirstNamechanged");
+    }
     cancelClicked(user) {
         debugger;
         if (user == null) {

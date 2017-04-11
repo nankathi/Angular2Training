@@ -2,7 +2,7 @@ import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
 import {HttpModule} from '@angular/http';
-import {CommonModule} from './../../modules/common/commonModule';
+import {AppCommonModule} from './../../modules/common/commonModule';
 import { DefaultPage } from "./../../defaultPage";
 import { SecurityRoutes } from "./securityRoutes";
 import { Users } from "./user/users";
@@ -13,7 +13,7 @@ import {UserService} from './_share/services/userService';
 
 
 @NgModule({
-    imports: [BrowserModule, FormsModule,HttpModule,SecurityRoutes,CommonModule],
+    imports: [BrowserModule, FormsModule,HttpModule,SecurityRoutes,AppCommonModule],
     declarations: [DefaultPage,Users,UserQuickEdit,EditUser],
     bootstrap: [DefaultPage],
     schemas:[CUSTOM_ELEMENTS_SCHEMA],

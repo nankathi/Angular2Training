@@ -9,37 +9,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
-let UserQuickEdit = class UserQuickEdit {
+let FormButtonPrimary = class FormButtonPrimary {
     constructor() {
-        this.onChanged123 = new core_1.EventEmitter();
-        //@Output() onChanged:EventEmitter<string> = new EventEmitter<string>();
-        this.firstNameChange = new core_1.EventEmitter();
-    }
-    //   public onNameChanged(newValue:string){
-    //     this.onChanged.emit(this.firstName);
-    //   }
-    onNameChanged(newValue) {
-        this.firstNameChange.emit(this.firstName);
+        this.cls = "btn-primary";
+        this.onClicked = new core_1.EventEmitter();
     }
 };
 __decorate([
     core_1.Input(), 
     __metadata('design:type', Object)
-], UserQuickEdit.prototype, "firstName", void 0);
+], FormButtonPrimary.prototype, "label", void 0);
 __decorate([
     core_1.Output(), 
     __metadata('design:type', core_1.EventEmitter)
-], UserQuickEdit.prototype, "onChanged123", void 0);
-__decorate([
-    core_1.Output(), 
-    __metadata('design:type', core_1.EventEmitter)
-], UserQuickEdit.prototype, "firstNameChange", void 0);
-UserQuickEdit = __decorate([
+], FormButtonPrimary.prototype, "onClicked", void 0);
+FormButtonPrimary = __decorate([
     core_1.Component({
-        selector: 'user-quick-edit',
-        templateUrl: 'src/modules/security/_share/components/UserQuickEdit.html'
+        selector: 'form-button-primary',
+        template: `
+                <button class="btn {{cls}}" (click)="onClicked.emit()" >{{label}}</button>  
+                `
     }), 
     __metadata('design:paramtypes', [])
-], UserQuickEdit);
-exports.UserQuickEdit = UserQuickEdit;
-//# sourceMappingURL=userQuickEdit.js.map
+], FormButtonPrimary);
+exports.FormButtonPrimary = FormButtonPrimary;
+//# sourceMappingURL=formButtonPrimary.js.map

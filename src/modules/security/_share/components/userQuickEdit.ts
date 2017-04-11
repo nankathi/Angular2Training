@@ -7,6 +7,7 @@ export class UserQuickEdit {
    //@Input + Change = Output
   //@Input() user:any;
   @Input() firstName:any;
+  @Output() onChanged123:EventEmitter<any> = new EventEmitter();
   //@Output() onChanged:EventEmitter<string> = new EventEmitter<string>();
   @Output() firstNameChange:EventEmitter<string> = new EventEmitter<string>();
 

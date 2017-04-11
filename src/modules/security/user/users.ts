@@ -43,6 +43,9 @@ export class Users{
         user.firstName = user.currentVersion.firstName;
     }
 
+    public OnFirstNamechanged(){
+        console.log("OnFirstNamechanged");
+    }
     public cancelClicked(user:any){
         debugger;
         if(user == null){

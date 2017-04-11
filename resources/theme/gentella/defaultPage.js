@@ -8,23 +8,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const router_1 = require("@angular/router");
 const core_1 = require("@angular/core");
-const users_1 = require("./user/users");
-const editUser_1 = require("./user/editUser");
-let routes = [
-    { path: "", redirectTo: "users", pathMatch: "full" },
-    { path: "users", component: users_1.Users },
-    { path: 'users/:userId', component: editUser_1.EditUser },
-];
-let SecurityRoutes = class SecurityRoutes {
+let DefaultPage = class DefaultPage {
 };
-SecurityRoutes = __decorate([
-    core_1.NgModule({
-        imports: [router_1.RouterModule.forChild(routes)],
-        exports: [router_1.RouterModule]
+DefaultPage = __decorate([
+    core_1.Component({
+        selector: "default-page",
+        templateUrl: 'resources/theme/gentella/defaultPage.html'
     }), 
     __metadata('design:paramtypes', [])
-], SecurityRoutes);
-exports.SecurityRoutes = SecurityRoutes;
-//# sourceMappingURL=securityRoutes.js.map
+], DefaultPage);
+exports.DefaultPage = DefaultPage;
+//# sourceMappingURL=defaultPage.js.map

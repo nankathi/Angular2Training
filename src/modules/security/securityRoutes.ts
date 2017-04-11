@@ -9,7 +9,7 @@ let routes:Routes = [
     {path:'users/:userId',component:EditUser},
 ]
 @NgModule({
-    imports:[RouterModule.forRoot(routes)],
+    imports:[RouterModule.forChild(routes)],
     exports:[RouterModule]
 })
 

@@ -9,11 +9,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require("@angular/core");
-const platform_browser_1 = require("@angular/platform-browser");
+const common_1 = require("@angular/common");
 const forms_1 = require("@angular/forms");
 const http_1 = require('@angular/http');
 const commonModule_1 = require('./../../modules/common/commonModule');
-const defaultPage_1 = require("./../../defaultPage");
+//import { DefaultPage } from "./../../defaultPage";
 const securityRoutes_1 = require("./securityRoutes");
 const users_1 = require("./user/users");
 const editUser_1 = require("./user/editUser");
@@ -24,9 +24,8 @@ let SecurityModule = class SecurityModule {
 };
 SecurityModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule, securityRoutes_1.SecurityRoutes, commonModule_1.AppCommonModule],
-        declarations: [defaultPage_1.DefaultPage, users_1.Users, userQuickEdit_1.UserQuickEdit, editUser_1.EditUser],
-        bootstrap: [defaultPage_1.DefaultPage],
+        imports: [common_1.CommonModule, forms_1.FormsModule, http_1.HttpModule, commonModule_1.AppCommonModule, securityRoutes_1.SecurityRoutes],
+        declarations: [users_1.Users, userQuickEdit_1.UserQuickEdit, editUser_1.EditUser],
         schemas: [core_1.CUSTOM_ELEMENTS_SCHEMA],
         providers: [userService_1.UserService]
     }), 

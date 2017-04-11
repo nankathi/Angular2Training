@@ -1,5 +1,5 @@
 "use strict";
 const platform_browser_dynamic_1 = require("@angular/platform-browser-dynamic");
-const securityModule_1 = require("./modules/security/securityModule");
-platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(securityModule_1.SecurityModule);
+const applicationModule_1 = require("./applicationModule");
+platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(applicationModule_1.ApplicationModule);
 //# sourceMappingURL=main.js.map

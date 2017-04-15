@@ -3,7 +3,8 @@
         defaultJSExtensions: true,
         baseUrl: '.',
         paths: {
-            npm: "node_modules/"
+            npm: "node_modules/",
+            "@app/common":["./src/modules/common/index"]
         },
         map: {
             "src": "src",

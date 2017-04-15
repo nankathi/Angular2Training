@@ -31,7 +31,7 @@ export class Users{
     //     ];
 
     public onEditClicked(user:any){
-        this.router.navigate(["users/",user.id])
+        this.router.navigate(["security/users",user.id])
     }
     public onQuickEditClicked(user:any){
         this.selectedUser = user;

@@ -8,7 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const core_1 = require('@angular/core');
+Object.defineProperty(exports, "__esModule", { value: true });
+const core_1 = require("@angular/core");
 let UserQuickEdit = class UserQuickEdit {
     constructor() {
         this.onChanged123 = new core_1.EventEmitter();
@@ -23,23 +24,22 @@ let UserQuickEdit = class UserQuickEdit {
     }
 };
 __decorate([
-    core_1.Input(), 
-    __metadata('design:type', Object)
+    core_1.Input(),
+    __metadata("design:type", Object)
 ], UserQuickEdit.prototype, "firstName", void 0);
 __decorate([
-    core_1.Output(), 
-    __metadata('design:type', core_1.EventEmitter)
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
 ], UserQuickEdit.prototype, "onChanged123", void 0);
 __decorate([
-    core_1.Output(), 
-    __metadata('design:type', core_1.EventEmitter)
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
 ], UserQuickEdit.prototype, "firstNameChange", void 0);
 UserQuickEdit = __decorate([
     core_1.Component({
         selector: 'user-quick-edit',
         templateUrl: 'src/modules/security/_share/components/UserQuickEdit.html'
-    }), 
-    __metadata('design:paramtypes', [])
+    })
 ], UserQuickEdit);
 exports.UserQuickEdit = UserQuickEdit;
 //# sourceMappingURL=userQuickEdit.js.map
